@@ -1,0 +1,7 @@
+{
+  "name": "react-hot-loader-example",
+  "version": "0.0.0",
+  "description": "Example of hot reloading a React web app.",
+  "author": "Mark <mark@remarkablemark.org>",
+  "license": "MIT"
+}
