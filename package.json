@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "Example of hot reloading a React web app.",
   "author": "Mark <mark@remarkablemark.org>",
+  "scripts": {
+    "start": "webpack-dev-server --hot --env.NODE_ENV=development --open",
+    "build": "webpack -p --env.NODE_ENV=production"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
