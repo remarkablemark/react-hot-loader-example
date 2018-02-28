@@ -47,6 +47,21 @@ module.exports = (env = { NODE_ENV: 'production' }) => ({
     // hoist all modules to a single scope instead of writing a separate closure for each
     env.NODE_ENV === 'production' && new webpack.optimize.ModuleConcatenationPlugin(),
 
+    // minify bundle in production
+    env.NODE_ENV === 'production' && new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        comparisons: false,
+      },
+      mangle: {
+        safari10: true,
+      },
+      output: {
+        comments: false,
+        ascii_only: true,
+      },
+    }),
+
     // display module names when using HMR
     env.NODE_ENV === 'development' && new webpack.NamedModulesPlugin(),
 
